@@ -8,19 +8,19 @@ import reducer from'./components/reducer.js'
 
 function App() {
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, {});
-  // const {currentNumber, previousNumber, operators} = state;
+
   
   return (
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
-      <div className='previous-operand'>{previousNumber}{operators}</div>
+      <div className='previous-operand'>{previousNumber}</div>
       <div className='current'>{currentNumber}</div>
       </div>
       <button value={"Ac"} className="white">Ac</button>
       <button value={"+/-"} className="white">+/-</button>
       <button value={"%"} className="white">%</button>
-      <button value={"/"} className="gold">&divide;</button>
+      {/* <button value={"/"} className="gold">&divide;</button> */}
       <Operators dispatch={dispatch} span={"gold"} operator={"/"}/>
       <Buttons number={'7'} dispatch={dispatch}/>
       <Buttons number={'8'} dispatch={dispatch}/>

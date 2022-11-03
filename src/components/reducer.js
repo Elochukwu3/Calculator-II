@@ -72,7 +72,7 @@ export default function reducer(state, {type, payload}) {
             return{
                 ...state,
                 previousNumber: calculate(state),
-                operators: null,
+                operators: payload.operator,
                 currentNumber: null,
             }
     }
