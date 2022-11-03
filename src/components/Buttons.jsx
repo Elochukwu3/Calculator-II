@@ -2,6 +2,8 @@ import React from 'react'
 
 export default function Buttons() {
   return (
-    <div>Buttons</div>
+
+        <button value={"7"}>7</button>
+    
   )
 }
