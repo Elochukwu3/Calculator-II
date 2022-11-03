@@ -14,8 +14,14 @@ export default function reducer(state, {type, payload}) {
             return{
                 ...state,
                 currentNumber:` ${state.currentNumber || ""}${ payload.number}` 
-            }
-         
+            };
+
+         case"operators":
+
+         return{
+            ...state,
+            previousNumber: state.currentNumber
+         }
            
               
     }
