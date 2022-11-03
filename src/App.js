@@ -1,23 +1,21 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="page-container">
+      <div className='grid-container'>
+      <div className='screen'>
+      <div className='previous-operand'></div>
+      <div className='current'></div>
+      </div>
+      <button value={"Ac"}>Ac</button>
+      <button value={"+/-"}>+/-</button>
+      <button value={"%"}>%</button>
+      <button value={"/"}>&divide;</button>
+      <button value={"7"}>7</button>
+      </div>
+     
     </div>
   );
 }
