@@ -30,10 +30,10 @@ function App() {
       <button value={"-"} className="gold">-</button>
       <Buttons number={'1'} dispatch={dispatch}/>
       <Buttons number={'2'} dispatch={dispatch}/>
-      <Buttons number={'3'} v/>
+      <Buttons number={'3'} dispatch={dispatch}/>
       <button value={"+"} className="gold">+</button>
       <Buttons number={'0'} span={"span-two"} dispatch={dispatch}/>
-      <Buttons number={'.'}/>
+      <Buttons number={'.'} dispatch={dispatch}/>
 
       <button value={"."} className="gold">=</button>
       </div>
