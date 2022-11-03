@@ -21,8 +21,8 @@ function App() {
       <button value={"%"} className="white">%</button>
       <button value={"/"} className="gold">&divide;</button>
       <Buttons number={'7'} dispatch={dispatch}/>
-      <Buttons number={'8'}/>
-      <Buttons number={'9'}/>
+      <Buttons number={'8'} dispatch={dispatch}/>
+      <Buttons number={'9'} dispatch={dispatch}/>
       <button value={"*"} className="gold">X</button>
       <Buttons number={'4'}/>
       <Buttons number={'5'}/>
