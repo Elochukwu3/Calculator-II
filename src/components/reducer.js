@@ -7,18 +7,19 @@ const SIGNS ={
     pecentage:'%',
 };
 
-function calculate({currentNumber, previousNumber, operator}) {
+function calculate({currentNumber, previousNumber, operators}) {
     let firstOperand = Number(currentNumber)
     let secondOperand = Number(previousNumber)
+    
     let result = '';
-    switch (operator) {
+    switch (operators) {
         case SIGNS.add:
            result= firstOperand + secondOperand
-            break
+            break;
         case SIGNS.minus:
            result = firstOperand - secondOperand
-            break
-        case "*":
+            break;
+        case SIGNS.mutiply:
            result = firstOperand * secondOperand
             break
         case SIGNS.division:
@@ -34,7 +35,6 @@ function calculate({currentNumber, previousNumber, operator}) {
     
 }
 export default function reducer(state, {type, payload}) {
-    console.log(state);
     switch (type) {
         case "Add-Numbers":
             if (state.currentNumber === "0" && payload.number === "0") {
@@ -61,7 +61,7 @@ export default function reducer(state, {type, payload}) {
                     operators: payload.operator
                 }
             }
-            if(state.previousNumber == nll){
+            if(state.previousNumber == null){
                 return{
                     ...state,
                     previousNumber: state.currentNumber,

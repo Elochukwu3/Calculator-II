@@ -4,11 +4,11 @@ import Buttons from './components/Buttons';
 import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
-const initial ={previousNumber: null, currentNumber:'', operators: null}
+// const initial =
 
 function App() {
-  const[state, dispatch]= useReducer(reducer, initial);
-  const {currentNumber, previousNumber, operators} = state;
+  const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, {});
+  // const {currentNumber, previousNumber, operators} = state;
   
   return (
     <div className="page-container">
