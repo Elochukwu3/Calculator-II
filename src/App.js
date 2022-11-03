@@ -8,6 +8,7 @@ const initial ={previousNumber:'', currentNumber:''}
 function App() {
   const[state, dispatch]= useReducer(reducer, initial);
   const {currentNumber, previousNumber} = state;
+
   return (
     <div className="page-container">
       <div className='grid-container'>

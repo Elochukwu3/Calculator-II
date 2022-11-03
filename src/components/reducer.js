@@ -2,16 +2,12 @@
 export default function reducer(state, {type, payload}) {
     switch (type) {
         case "Add-Numbers":
-            // if (state.currentNumber === "7") {
-            //     console.log(state.currentNumber);
-            // }
-            console.log(state.currentNumber);
-        return{
-            ...state,
-                currentNumber:` ${state.currentNumber || ""} ${ payload.number}` 
-            
-        }
-        default:
+            return{
+                ...state,
+                currentNumber:` ${state.currentNumber || ""} ${ payload}` 
+            }
+            default:
+              
     }
     
 }
