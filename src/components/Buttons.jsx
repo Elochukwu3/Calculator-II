@@ -1,9 +1,5 @@
-import React from 'react'
+import React from "react";
 
-export default function Buttons() {
-  return (
-
-        <button value={"7"}>7</button>
-    
-  )
+export default function Buttons({number, dispatch}) {
+  return <button value={number}>{number}</button>;
 }

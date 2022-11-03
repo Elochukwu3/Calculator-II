@@ -1,4 +1,5 @@
 
+import Buttons from './components/Buttons';
 import './components/Style.css';
 
 function App() {
@@ -13,9 +14,9 @@ function App() {
       <button value={"+/-"} className="white">+/-</button>
       <button value={"%"} className="white">%</button>
       <button value={"/"} className="gold">&divide;</button>
-      <button value={"7"}>7</button>
-      <button value={"7"}>8</button>
-      <button value={"7"}>9</button>
+      <Buttons number={'7'} />
+      <Buttons number={'8'}/>
+      <Buttons number={'9'}/>
       <button value={"*"} className="gold">X</button>
       <button value={"4"}>4</button>
       <button value={"5"}>5</button>
