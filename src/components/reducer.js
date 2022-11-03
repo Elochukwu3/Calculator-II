@@ -29,7 +29,7 @@ function calculate({currentNumber, previousNumber, operator}) {
             break;
     
         default:
-            break;
+            return result
     }
     
 }
