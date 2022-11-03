@@ -2,7 +2,7 @@
 import React, {useReducer} from 'react';
 import Buttons from './components/Buttons';
 import './components/Style.css';
-import {reducer} from'./components/reducer.js'
+import reducer from'./components/reducer.js'
 
 function App() {
   const[state, dispatch]= useReducer(reducer, {});
