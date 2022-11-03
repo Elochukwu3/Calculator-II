@@ -21,7 +21,7 @@ function calculate({currentNumber, previousNumber, operator}) {
         case SIGNS.mutiply:
            result = firstOperand * secondOperand
             break;
-        case SIGNS.mutiply:
+        case SIGNS.division:
            result = firstOperand * secondOperand
             break;
     
