@@ -1,14 +1,18 @@
 
+import React, {useReducer} from 'react';
 import Buttons from './components/Buttons';
 import './components/Style.css';
+import {reducer} from'./components/reducer.js'
 
 function App() {
+  const[state, dispatch]= useReducer(reducer, {});
+  const {currentNumber, previousNumber} = state;
   return (
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
-      <div className='previous-operand'>000</div>
-      <div className='current'>0</div>
+      <div className='previous-operand'>{previousNumber}</div>
+      <div className='current'>{currentNumber}</div>
       </div>
       <button value={"Ac"} className="white">Ac</button>
       <button value={"+/-"} className="white">+/-</button>
