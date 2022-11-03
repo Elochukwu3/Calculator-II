@@ -2,15 +2,21 @@
 export default function reducer(state, {type, payload}) {
     switch (type) {
         case "Add-Numbers":
-            if (payload.number === "0" && state.currentNumber === "0") {
-                console.log("jjj");
-                // return state;
+            if (state.currentNumber === "0" && payload.number === "0") {
+                return state
+                
             }
+            if (payload.number === "." && state.currentNumber.includes(".") ) {
+                  return state
+                
+            }
+         
             return{
                 ...state,
-                currentNumber:` ${state.currentNumber || ""} ${ payload.number}` 
+                currentNumber:` ${state.currentNumber || ""}${ payload.number}` 
             }
-            default:
+         
+           
               
     }
     
