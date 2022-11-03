@@ -4,7 +4,7 @@ import Buttons from './components/Buttons';
 import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
-const initial ={previousNumber:'', currentNumber:'', operators:''}
+const initial ={previousNumber: null, currentNumber:'', operators: null}
 
 function App() {
   const[state, dispatch]= useReducer(reducer, initial);
