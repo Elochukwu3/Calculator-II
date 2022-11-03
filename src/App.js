@@ -1,6 +1,9 @@
 
 import Buttons from './components/Buttons';
 import './components/Style.css';
+const spantwo ={
+  
+}
 
 function App() {
   return (
@@ -26,7 +29,7 @@ function App() {
       <Buttons number={'2'}/>
       <Buttons number={'3'}/>
       <button value={"+"} className="gold">+</button>
-      <Buttons number={'0'} span={"span-two"}/>
+      <Buttons number={'0'} span={spantwo}/>
       <Buttons number={'.'}/>
 
       <button value={"."} className="gold">=</button>
