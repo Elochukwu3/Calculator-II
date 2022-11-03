@@ -18,16 +18,17 @@ function App() {
       <Buttons number={'8'}/>
       <Buttons number={'9'}/>
       <button value={"*"} className="gold">X</button>
-      <button value={"4"}>4</button>
-      <button value={"5"}>5</button>
-      <button value={"6"}>6</button>
+      <Buttons number={'4'}/>
+      <Buttons number={'5'}/>
+      <Buttons number={'6'}/>
       <button value={"-"} className="gold">-</button>
-      <button value={"1"}>1</button>
-      <button value={"2"}>2</button>
-      <button value={"3"}>3</button>
+      <Buttons number={'1'}/>
+      <Buttons number={'2'}/>
+      <Buttons number={'3'}/>
       <button value={"+"} className="gold">+</button>
-      <button value={"0"} className='span-two'>0 </button>
-      <button value={"."}>.</button>
+      <Buttons number={'0'} span={"span-two"}/>
+      <Buttons number={'.'}/>
+
       <button value={"."} className="gold">=</button>
       </div>
      

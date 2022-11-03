@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function Buttons({number, dispatch}) {
-  return <button value={number}>{number}</button>;
+export default function Buttons({number, dispatch}, span) {
+  return <button value={number} className={span}>{number}</button>;
 }
