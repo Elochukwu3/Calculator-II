@@ -1,4 +1,29 @@
 
+const SIGNS ={
+    add:"+",
+    minus: "-",
+    mutiply:'*',
+    division:'/',
+    pecentage:'%',
+};
+
+function calculate({currentNumber, previousNumber, operator}) {
+    let firstOperand = Number(currentNumber)
+    let secondOperand = Number(previousNumber)
+    let result = '';
+    switch (operator) {
+        case SIGNS.add:
+           result= firstOperand + secondOperand
+            break;
+        case SIGNS.minus:
+           result = firstOperand - secondOperand
+            break;
+    
+        default:
+            break;
+    }
+    
+}
 export default function reducer(state, {type, payload}) {
     switch (type) {
         case "Add-Numbers":
@@ -17,13 +42,29 @@ export default function reducer(state, {type, payload}) {
             };
 
          case"operators":
-
-         return{
-            ...state,
-            previousNumber: state.currentNumber
-         }
-           
-              
+            if(state.currentNumber === "" && state.previousNumber === ""){
+              return state
+            }
+            if(state.currentNumber == null){
+                return{
+                    ...state,
+                    operators: payload.operator
+                }
+            }
+            if(state.previousNumber === ""){
+                return{
+                    ...state,
+                    previousNumber: state.currentNumber,
+                    operators: payload.operator,
+                    currentNumber: null
+                 }
+            }
+            return{
+                ...state,
+                previousNumber: calculate(state),
+                operators:payload.operator,
+                currentNumber: null,
+            }
     }
     
 }

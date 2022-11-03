@@ -1,18 +1,20 @@
 
 import React, {useReducer} from 'react';
 import Buttons from './components/Buttons';
+import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
 const initial ={previousNumber:'', currentNumber:'', operators:''}
 
 function App() {
   const[state, dispatch]= useReducer(reducer, initial);
-  const {currentNumber, previousNumber} = state;
+  const {currentNumber, previousNumber, operators} = state;
+  
   return (
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
-      <div className='previous-operand'>{previousNumber}</div>
+      <div className='previous-operand'>{previousNumber}{operators}</div>
       <div className='current'>{currentNumber}</div>
       </div>
       <button value={"Ac"} className="white">Ac</button>
@@ -22,7 +24,8 @@ function App() {
       <Buttons number={'7'} dispatch={dispatch}/>
       <Buttons number={'8'} dispatch={dispatch}/>
       <Buttons number={'9'} dispatch={dispatch}/>
-      <button value={"*"} className="gold">X</button>
+      <Operators dispatch={dispatch} span={"gold"} operator={"*"}/>
+      {/* <button value={"*"} className="gold">X</button> */}
       <Buttons number={'4'} dispatch={dispatch}/>
       <Buttons number={'5'} dispatch={dispatch}/>
       <Buttons number={'6'} dispatch={dispatch}/>
