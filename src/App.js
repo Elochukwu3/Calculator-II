@@ -2,7 +2,11 @@
 import Buttons from './components/Buttons';
 import './components/Style.css';
 const spantwo ={
-  
+  gridColumn: 'span 2',
+    width: '100%',
+    borderRadius: '2rem',
+    textAlign: 'left',
+    paddingLeft:'1rem ',
 }
 
 function App() {
