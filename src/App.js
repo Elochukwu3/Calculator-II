@@ -3,9 +3,10 @@ import React, {useReducer} from 'react';
 import Buttons from './components/Buttons';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
+const initial ={previousNumber:'', currentNumber:''}
 
 function App() {
-  const[state, dispatch]= useReducer(reducer, {});
+  const[state, dispatch]= useReducer(reducer, initial);
   const {currentNumber, previousNumber} = state;
   return (
     <div className="page-container">

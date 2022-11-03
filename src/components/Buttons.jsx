@@ -5,7 +5,7 @@ export default function Buttons({ number, dispatch, span }) {
     <button
       value={number}
       className={span}
-      onClick={() => dispatch({ type: "Add-Numbers", payload: { number } })}
+      onClick={() => dispatch({ type: "Add-Numbers", payload:{ number }})}
     >
       {number}
     </button>
