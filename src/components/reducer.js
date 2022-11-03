@@ -61,7 +61,7 @@ export default function reducer(state, {type, payload}) {
                     operators: payload.operator
                 }
             }
-            if(state.previousNumber == null){
+            if(state.previousNumber == nll){
                 return{
                     ...state,
                     previousNumber: state.currentNumber,
