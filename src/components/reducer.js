@@ -18,6 +18,9 @@ function calculate({currentNumber, previousNumber, operator}) {
         case SIGNS.minus:
            result = firstOperand - secondOperand
             break;
+        case SIGNS.minus:
+           result = firstOperand - secondOperand
+            break;
     
         default:
             break;
