@@ -18,7 +18,7 @@ function calculate({currentNumber, previousNumber, operator}) {
         case SIGNS.minus:
            result = firstOperand - secondOperand
             break
-        case SIGNS.mutiply:
+        case "*":
            result = firstOperand * secondOperand
             break
         case SIGNS.division:
@@ -34,6 +34,7 @@ function calculate({currentNumber, previousNumber, operator}) {
     
 }
 export default function reducer(state, {type, payload}) {
+    console.log(state);
     switch (type) {
         case "Add-Numbers":
             if (state.currentNumber === "0" && payload.number === "0") {
@@ -75,5 +76,5 @@ export default function reducer(state, {type, payload}) {
                 currentNumber: null,
             }
     }
-    
+   
 }
