@@ -21,19 +21,19 @@ function App() {
       <button value={"+/-"} className="white">+/-</button>
       <button value={"%"} className="white">%</button>
       <button value={"/"} className="gold">&divide;</button>
+      <Operators dispatch={dispatch} span={"gold"} operator={"/"}/>
       <Buttons number={'7'} dispatch={dispatch}/>
       <Buttons number={'8'} dispatch={dispatch}/>
       <Buttons number={'9'} dispatch={dispatch}/>
       <Operators dispatch={dispatch} span={"gold"} operator={"*"}/>
-      {/* <button value={"*"} className="gold">X</button> */}
       <Buttons number={'4'} dispatch={dispatch}/>
       <Buttons number={'5'} dispatch={dispatch}/>
       <Buttons number={'6'} dispatch={dispatch}/>
-      <button value={"-"} className="gold">-</button>
+      <Operators dispatch={dispatch} span={"gold"} operator={"-"}/>
       <Buttons number={'1'} dispatch={dispatch}/>
       <Buttons number={'2'} dispatch={dispatch}/>
       <Buttons number={'3'} dispatch={dispatch}/>
-      <button value={"+"} className="gold">+</button>
+      <Operators dispatch={dispatch} span={"gold"} operator={"+"}/>
       <Buttons number={'0'} span={"span-two"} dispatch={dispatch}/>
       <Buttons number={'.'} dispatch={dispatch}/>
 
