@@ -24,15 +24,15 @@ function App() {
       <Buttons number={'8'} dispatch={dispatch}/>
       <Buttons number={'9'} dispatch={dispatch}/>
       <button value={"*"} className="gold">X</button>
-      <Buttons number={'4'}/>
-      <Buttons number={'5'}/>
-      <Buttons number={'6'}/>
+      <Buttons number={'4'} dispatch={dispatch}/>
+      <Buttons number={'5'} dispatch={dispatch}/>
+      <Buttons number={'6'} dispatch={dispatch}/>
       <button value={"-"} className="gold">-</button>
-      <Buttons number={'1'}/>
-      <Buttons number={'2'}/>
-      <Buttons number={'3'}/>
+      <Buttons number={'1'} dispatch={dispatch}/>
+      <Buttons number={'2'} dispatch={dispatch}/>
+      <Buttons number={'3'} v/>
       <button value={"+"} className="gold">+</button>
-      <Buttons number={'0'} span={"span-two"}/>
+      <Buttons number={'0'} span={"span-two"} dispatch={dispatch}/>
       <Buttons number={'.'}/>
 
       <button value={"."} className="gold">=</button>
