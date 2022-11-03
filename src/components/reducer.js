@@ -22,7 +22,10 @@ function calculate({currentNumber, previousNumber, operator}) {
            result = firstOperand * secondOperand
             break;
         case SIGNS.division:
-           result = firstOperand * secondOperand
+           result = firstOperand / secondOperand
+            break;
+        case SIGNS.division:
+           result = firstOperand / secondOperand
             break;
     
         default:
