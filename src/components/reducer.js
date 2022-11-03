@@ -52,7 +52,7 @@ export default function reducer(state, {type, payload}) {
             };
 
          case"operators":
-            if(state.currentNumber === "" && state.previousNumber === ""){
+            if(state.currentNumber == null && state.previousNumber == null){
               return state
             }
             if(state.currentNumber == null){
@@ -61,7 +61,7 @@ export default function reducer(state, {type, payload}) {
                     operators: payload.operator
                 }
             }
-            if(state.previousNumber === ""){
+            if(state.previousNumber == null){
                 return{
                     ...state,
                     previousNumber: state.currentNumber,
