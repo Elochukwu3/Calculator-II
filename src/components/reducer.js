@@ -24,7 +24,7 @@ function calculate({currentNumber, previousNumber, operator}) {
         case SIGNS.division:
            result = firstOperand / secondOperand
             break;
-        case SIGNS.division:
+        case SIGNS.pecentage:
            result = firstOperand / secondOperand
             break;
     
