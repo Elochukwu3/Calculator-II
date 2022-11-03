@@ -1,11 +1,17 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 export default function Operators({operator, span, dispatch}) {
+    const[active, setActive] = useState(false)
+   function  addOperator() { 
+    dispatch({ type: "operators", payload:{operator: operator} })
+    setActive(!active)
+}
+
   return (
-    <button
+    <button 
       value={operator}
-      className={span}
-      onClick={() => dispatch({ type: "operators", payload:{operator: operator} })}
+      className= {active ?  "colored": span}
+      onClick={addOperator}
     >
       {operator}
     </button>
