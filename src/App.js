@@ -3,7 +3,7 @@ import React, {useReducer} from 'react';
 import Buttons from './components/Buttons';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
-const initial ={previousNumber:'', currentNumber:''}
+const initial ={previousNumber:'', currentNumber:'', operators:''}
 
 function App() {
   const[state, dispatch]= useReducer(reducer, initial);
