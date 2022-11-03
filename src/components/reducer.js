@@ -14,25 +14,23 @@ function calculate({currentNumber, previousNumber, operator}) {
     switch (operator) {
         case SIGNS.add:
            result= firstOperand + secondOperand
-            break;
+            break
         case SIGNS.minus:
            result = firstOperand - secondOperand
-            break;
+            break
         case SIGNS.mutiply:
            result = firstOperand * secondOperand
-            break;
+            break
         case SIGNS.division:
            result = firstOperand / secondOperand
-            break;
+            break
         case SIGNS.pecentage:
            result = firstOperand / secondOperand
-            break;
-    
-        default:
+            break
             
-            console.log(result.toString());
-            return result
-    }
+        }
+        
+        return result.toString()
     
 }
 export default function reducer(state, {type, payload}) {
@@ -73,7 +71,7 @@ export default function reducer(state, {type, payload}) {
             return{
                 ...state,
                 previousNumber: calculate(state),
-                operators:payload.operator,
+                operators: null,
                 currentNumber: null,
             }
     }
