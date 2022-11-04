@@ -6,6 +6,9 @@
     padding: 0;
     text-decoration: none;
 }
+html{
+    overflow: hidden;
+}
 body{
     min-height: 100vh;
     background: #000;
@@ -43,8 +46,6 @@ body{
 }
 .previous-operand{
     font-size: 1rem;
-    
-    
 }
 .current{
     font-weight: bolder;
@@ -75,4 +76,19 @@ button{
 }
 button:hover, button:focus{
    transform: background, ease-out;
+}
+@media screen and (max-width: 410px) {
+    .grid-container{
+        grid-template-columns: repeat(4, 5.2rem);
+        grid-template-rows: minmax(7rem, auto) repeat(5, 5.4rem);
+    }
+    button{
+        border-radius: 50%;
+        background: rgb(80, 80, 80);
+        width: 4.8rem;
+        height: 4.8rem;
+        font-size: 1.5rem;
+        color: #fff ;
+        border: unset;
+    }
 }
