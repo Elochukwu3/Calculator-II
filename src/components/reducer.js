@@ -44,7 +44,7 @@ export default function reducer(state, { type, payload }) {
       }
 
       if (payload.number === ".")
-        return { ...state, currentNumber: payload.number };
+        return { ...state, currentNumber: ` ${state.currentNumber || ""}${payload.number}` };
 
       return {
         ...state,
