@@ -42,10 +42,13 @@ export default function reducer(state, { type, payload }) {
         };
       }
       if (state.currentNumber === "0" && payload.number === "0") return state;
-
-      if (payload.number === "." && state.currentNumber.includes(".")) {
-        return state;
+      if (state.currentNumber) {
+        if (payload.number === "." && state.currentNumber.includes("."))
+          return state;
       }
+
+      if (payload.number === ".")
+        return { ...state, currentNumber: payload.number };
 
       return {
         ...state,

@@ -25,7 +25,7 @@ function App() {
       <div className='grid-container'>
       <div className='screen'>
       <div className='previous-operand'>{formatOperand(previousNumber)}</div>
-      <div className='current'>{formatOperand(currentNumber)} <span className='cusor-text'></span></div>
+      <div className='current'>{formatOperand(currentNumber)}</div>
       </div>
       <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
       <button value={"+/-"} className="white" onClick={()=> dispatch({type: 'delete'})}>del</button>
