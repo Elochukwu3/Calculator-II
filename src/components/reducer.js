@@ -1,10 +1,5 @@
-const SIGNS = {
-  add: "+",
-  minus: "-",
-  mutiply: "*",
-  division: "÷",
-  pecentage: "%",
-};
+import { SIGNS } from "./Objects";
+import { ACTIONS } from "./Objects";
 
 function calculate({ currentNumber, previousNumber, operators }) {
   let firstOperand = Number(previousNumber);
@@ -31,9 +26,10 @@ function calculate({ currentNumber, previousNumber, operators }) {
 
   return result.toString();
 }
+
 export default function reducer(state, { type, payload }) {
   switch (type) {
-    case "Add-Numbers":
+    case ACTIONS.AddNumbers:
       if (state.startClicking) {
         return {
           ...state,
@@ -55,7 +51,7 @@ export default function reducer(state, { type, payload }) {
         currentNumber: ` ${state.currentNumber || ""}${payload.number}`,
       };
 
-    case "operators":
+    case ACTIONS.Operators:
       if (state.currentNumber == null && state.previousNumber == null) {
         return state;
       }
@@ -80,7 +76,7 @@ export default function reducer(state, { type, payload }) {
         currentNumber: null,
       };
 
-    case "clear":
+    case ACTIONS.Clear:
       return {};
     // calculate if the equals sign is clicked
     case "evaluate":
@@ -98,7 +94,7 @@ export default function reducer(state, { type, payload }) {
         previousNumber: null,
         operators: null,
       };
-    case "delete":
+    case ACTIONS.Delete:
       console.log(typeof state.currentNumber);
       if (state.startClicking) {
         return {
