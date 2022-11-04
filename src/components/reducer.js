@@ -76,6 +76,12 @@ export default function reducer(state, {type, payload}) {
                 operators: payload.operator,
                 currentNumber: null,
             }
+            case "clear":
+                return{}
+            case "evaluate":
+                if (state.currentNumber || state.previousNumber || state.operators) {
+                    console.log('hhhh');
+                }
     }
    
 }

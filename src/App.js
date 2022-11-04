@@ -17,8 +17,8 @@ function App() {
       <div className='previous-operand'>{previousNumber}</div>
       <div className='current'>{currentNumber}</div>
       </div>
-      <button value={"Ac"} className="white">Ac</button>
-      <button value={"+/-"} className="white">+/-</button>
+      <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
+      <button value={"+/-"} className="white">del</button>
       <Operators dispatch={dispatch} span={"white"} operator={"%"}/>
       {/* <button value={"/"} className="gold">&divide;</button> */}
       <Operators dispatch={dispatch} span={"gold"} operator={"÷"}/>
