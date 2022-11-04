@@ -7,11 +7,12 @@
     text-decoration: none;
 }
 html{
-    /* overflow-x: hidden; */
+    overflow: hidden;
 }
 body{
     min-height: 100vh;
     background: #000;
+    overflow-x: hidden;
 }
 .head{
     color: #fff;
