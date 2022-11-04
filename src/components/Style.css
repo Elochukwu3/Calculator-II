@@ -46,7 +46,8 @@ body {
   color: #fff;
   width: 90%;
   border-top: 1px solid #ddd;
-  border-radius: 4px;
+  box-shadow: inset -1px 2px 3px #ddd;
+  border-radius: 6px;
 }
 .span-two {
   grid-column: span 2;
