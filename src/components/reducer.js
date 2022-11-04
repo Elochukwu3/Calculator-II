@@ -82,7 +82,8 @@ export default function reducer(state, {type, payload}) {
                 previousNumber: calculate(state),
                 operators: payload.operator,
                 currentNumber: null,
-            }
+            };
+
             case "clear":
                 return{};
                 // calculate if the equals sign is clicked
@@ -97,6 +98,26 @@ export default function reducer(state, {type, payload}) {
                     previousNumber: null,
                     operators: null
                 }
+        case"delete":
+        if (state.startClicking) {
+            return{
+                ...state,
+                currentNumber: null,
+                startClicking: false,
+            }
+        }
+        if (state.currentNumber == null) return state;
+        if (state.currentNumber.lenght === 1) {
+            return{
+                ...state,
+                currentNumber: null
+            }
+            
+        }
+       return{
+        ...state,
+        currentNumber: state.currentNumber.charAt(-1)
+       }
     }
    
 }
