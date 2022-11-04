@@ -15,7 +15,7 @@ function App() {
       <div className='grid-container'>
       <div className='screen'>
       <div className='previous-operand'>{previousNumber}</div>
-      <div className='current'>{currentNumber}</div>
+      <div className='current'>{numberWithCommas(currentNumber)}</div>
       </div>
       <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
       <button value={"+/-"} className="white" onClick={()=> dispatch({type: 'delete'})}>del</button>
