@@ -19,7 +19,7 @@ function App() {
       </div>
       <button value={"Ac"} className="white">Ac</button>
       <button value={"+/-"} className="white">+/-</button>
-      <button value={"%"} className="white">%</button>
+      <Operators dispatch={dispatch} span={"white"} operator={"%"}/>
       {/* <button value={"/"} className="gold">&divide;</button> */}
       <Operators dispatch={dispatch} span={"gold"} operator={"÷"}/>
       <Buttons number={'7'} dispatch={dispatch}/>

@@ -1,16 +1,27 @@
 import React, {useState} from 'react'
 
 export default function Operators({operator, span, dispatch}) {
-    const[active, setActive] = useState(false)
-   function  addOperator() { 
+    function showChoosen(arr, n) {
+        for (let index = 0; index < arr.length; index++) {
+            arr[n].style.background = "rgba(9, 4, 49, 0.2)";
+        }
+        console.log(arr[n].className);
+      }
+      let kk = []
+
+    const[active, setActive] = useState([])
+   function  addOperator(e) { 
     dispatch({ type: "operators", payload:{operator: operator} })
-    setActive(!active)
+    // console.log(e.target);
+  setActive((prev)=>[...prev, e.target])
+ 
 }
 
+showChoosen(active, 0)
   return (
     <button 
       value={operator}
-      className= {active ?  "colored": span}
+      className= {span}
       onClick={addOperator}
     >
       {operator}

@@ -26,7 +26,8 @@ function calculate({currentNumber, previousNumber, operators}) {
            result = firstOperand / secondOperand
             break
         case SIGNS.pecentage:
-           result = firstOperand / secondOperand
+            
+           result = firstOperand / 10
             break
             
         }
