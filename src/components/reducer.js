@@ -99,6 +99,7 @@ export default function reducer(state, {type, payload}) {
                     operators: null
                 }
         case"delete":
+        console.log(typeof(state.currentNumber));
         if (state.startClicking) {
             return{
                 ...state,
@@ -116,7 +117,7 @@ export default function reducer(state, {type, payload}) {
         }
        return{
         ...state,
-        currentNumber: state.currentNumber.charAt(-1)
+        currentNumber: state.currentNumber.substring(0, state.currentNumber.length -1)
        }
     }
    

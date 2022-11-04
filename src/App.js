@@ -18,9 +18,8 @@ function App() {
       <div className='current'>{currentNumber}</div>
       </div>
       <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
-      <button value={"+/-"} className="white">del</button>
+      <button value={"+/-"} className="white" onClick={()=> dispatch({type: 'delete'})}>del</button>
       <Operators dispatch={dispatch} span={"white"} operator={"%"}/>
-      {/* <button value={"/"} className="gold">&divide;</button> */}
       <Operators dispatch={dispatch} span={"gold"} operator={"÷"}/>
       <Buttons number={'7'} dispatch={dispatch}/>
       <Buttons number={'8'} dispatch={dispatch}/>
