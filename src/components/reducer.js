@@ -20,7 +20,7 @@ function calculate({ currentNumber, previousNumber, operators }) {
       result = firstOperand / secondOperand;
       break;
     case SIGNS.pecentage:
-      result = (firstOperand /100 ) *  secondOperand;
+      result = (firstOperand / 100) * secondOperand;
       break;
 
     default:
