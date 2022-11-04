@@ -4,8 +4,12 @@ import Buttons from './components/Buttons';
 import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
+import { INITIAL } from './components/Objects';
+
+
 function App() {
-  const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, initial);
+  const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, INITIAL);
+  
   const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
     maximumFractionDigits: 0,
   })
