@@ -1,18 +1,13 @@
-import React, {useState} from 'react'
+import React from "react";
+import { ACTIONS } from "./Objects";
 
-export default function Operators({operator, span, dispatch, id}) {
-   function  addOperator() { 
-    dispatch({ type: "operators", payload:{operator: operator} })
- 
-}
+export default function Operators({ operator, span, dispatch }) {
+  function addOperator() {
+    dispatch({ type: ACTIONS.Operators, payload: { operator: operator } });
+  }
   return (
-    <button 
-      value={operator}
-      className= { span}
-      onClick={addOperator}
-   
-    >
+    <button value={operator} className={span} onClick={addOperator}>
       {operator}
     </button>
-  )
+  );
 }
