@@ -1,21 +1,14 @@
 import React, {useState} from 'react'
 
 export default function Operators({operator, span, dispatch, id}) {
-    
-  
-
-    const[active, setActive] = useState([])
-   function  addOperator(e) { 
+   function  addOperator() { 
     dispatch({ type: "operators", payload:{operator: operator} })
-  setActive((prev)=>[...prev, e.target])
  
 }
-
-showChoosen(active, id)
   return (
     <button 
       value={operator}
-      className= {span}
+      className= { span}
       onClick={addOperator}
    
     >
