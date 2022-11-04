@@ -8,6 +8,14 @@ import { INITIAL } from './components/Objects';
 import { formatOperand } from './components/Objects';
 import { ACTIONS } from './components/Objects';
 
+/*
+  1.imported my reducer function which executes or renders the reducer function(enhances actions to be triggered
+    on the click of any button.)
+   2.imported my INITIAL object; this object comprises my initial value on render and represents my state values
+3. imported my formatOperand function: this takes in a value checks for dot and assign comma at suitable digits.
+
+*/
+
 function App() {
 
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, INITIAL);
