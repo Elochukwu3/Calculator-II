@@ -4,10 +4,10 @@ import Buttons from './components/Buttons';
 import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
-// const initial =
+const initial = {previousNumber: null, currentNumber: null, operators: null}
 
 function App() {
-  const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, {});
+  const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, initial);
 
   
   return (
@@ -37,7 +37,7 @@ function App() {
       <Buttons number={'0'} span={"span-two"} dispatch={dispatch}/>
       <Buttons number={'.'} dispatch={dispatch}/>
 
-      <button value={"."} className="gold">=</button>
+      <button value={"="} className="gold" onClick={()=>dispatch({type:"evaluate"})}>=</button>
       </div>
      
     </div>
