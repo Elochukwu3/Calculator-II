@@ -4,8 +4,6 @@ import Buttons from './components/Buttons';
 import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
-const initial = {previousNumber: null, currentNumber: null, operators: null, startClicking: false}
-
 function App() {
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, initial);
   const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
