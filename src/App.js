@@ -5,21 +5,13 @@ import Operators from './components/Operators';
 import './components/Style.css';
 import reducer from'./components/reducer.js'
 import { INITIAL } from './components/Objects';
+import { formatOperand } from './components/Objects';
 
 
 function App() {
+  
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, INITIAL);
-  
-  const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
-    maximumFractionDigits: 0,
-  })
-  function formatOperand(operand) {
-    if (operand == null) return
-    const [integer, decimal] = operand.split(".")
-    if (decimal == null) return INTEGER_FORMATTER.format(integer)
-    return `${INTEGER_FORMATTER.format(integer)}.${decimal}`
-  }
-  
+
   return (
    <>
       <p className='head'>calculator</p>
