@@ -6,10 +6,10 @@ import './components/Style.css';
 import reducer from'./components/reducer.js'
 import { INITIAL } from './components/Objects';
 import { formatOperand } from './components/Objects';
-
+import { ACTIONS } from './components/Objects';
 
 function App() {
-  
+
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, INITIAL);
 
   return (
@@ -21,8 +21,8 @@ function App() {
       <div className='previous-operand'>{formatOperand(previousNumber)}</div>
       <div className='current'>{formatOperand(currentNumber)}</div>
       </div>
-      <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
-      <button value={"+/-"} className="white" onClick={()=> dispatch({type: 'delete'})}>del</button>
+      <button value={"Ac"} className="white" onClick={()=> dispatch({type: ACTIONS.Clear})}>Ac</button>
+      <button value={"del"} className="white" onClick={()=> dispatch({type: ACTIONS.Delete})}>del</button>
       <Operators dispatch={dispatch} span={"white"} operator={"%"}/>
       <Operators dispatch={dispatch} span={"gold"} operator={"÷"}/>
       <Buttons number={'7'} dispatch={dispatch}/>
@@ -40,7 +40,7 @@ function App() {
       <Buttons number={'0'} span={"span-two"} dispatch={dispatch}/>
       <Buttons number={'.'} dispatch={dispatch}/>
 
-      <button value={"="} className="gold" onClick={()=>dispatch({type:"evaluate"})}>=</button>
+      <button value={"="} className="gold" onClick={()=>dispatch({type: ACTIONS.Calculate})}>=</button>
       </div>
      
     </div>

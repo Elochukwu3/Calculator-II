@@ -20,10 +20,12 @@ function calculate({ currentNumber, previousNumber, operators }) {
       result = firstOperand / secondOperand;
       break;
     case SIGNS.pecentage:
-      result = firstOperand / 10;
+      result = (firstOperand /100 ) *  secondOperand;
       break;
-  }
 
+    default:
+      return {};
+  }
   return result.toString();
 }
 
@@ -44,7 +46,10 @@ export default function reducer(state, { type, payload }) {
       }
 
       if (payload.number === ".")
-        return { ...state, currentNumber: ` ${state.currentNumber || ""}${payload.number}` };
+        return {
+          ...state,
+          currentNumber: ` ${state.currentNumber || ""}${payload.number}`,
+        };
 
       return {
         ...state,
@@ -117,5 +122,7 @@ export default function reducer(state, { type, payload }) {
           state.currentNumber.length - 1
         ),
       };
+    default:
+      return {};
   }
 }
