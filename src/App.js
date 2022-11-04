@@ -19,6 +19,8 @@ function App() {
   }
   
   return (
+   <>
+      <p className='head'>calculator</p>
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
@@ -48,6 +50,7 @@ function App() {
       </div>
      
     </div>
+   </>
   );
 }
 
