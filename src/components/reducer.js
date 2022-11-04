@@ -3,13 +3,13 @@ const SIGNS ={
     add:"+",
     minus: "-",
     mutiply:'*',
-    division:'/',
+    division:'÷',
     pecentage:'%',
 };
 
 function calculate({currentNumber, previousNumber, operators}) {
-    let firstOperand = Number(currentNumber)
-    let secondOperand = Number(previousNumber)
+    let firstOperand = Number( previousNumber)
+    let secondOperand = Number(currentNumber)
     
     let result = '';
     switch (operators) {
