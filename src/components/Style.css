@@ -45,6 +45,8 @@ body {
   word-break: break-all;
   color: #fff;
   width: 90%;
+  border-top: 1px solid #ddd;
+  border-radius: 4px;
 }
 .span-two {
   grid-column: span 2;
@@ -61,6 +63,9 @@ body {
   color: #fff;
   font-size: 1.9rem;
 }
+.operator-sign{
+  padding-left: .04rem;
+}
 button {
   border-radius: 50%;
   background: rgb(80, 80, 80);
@@ -69,9 +74,13 @@ button {
   font-size: 1.5rem;
   color: #fff;
   border: unset;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .gold {
   background: #ffcc02;
+  font-size: 2em;
 }
 .colored {
   background-color: #fff;
@@ -97,4 +106,8 @@ button:focus {
     height: 4.8rem;
     font-size: 1.6rem;
   }
+}
+.gold:focus{
+  background-color: #fff;
+  color: #ffcc02;
 }

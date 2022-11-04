@@ -18,7 +18,7 @@ function App() {
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
-      <div className='previous-operand'>{formatOperand(previousNumber)}</div>
+      <div className='previous-operand'>{formatOperand(previousNumber)} <span className='operator-sign'>{operators}</span></div>
       <div className='current'>{formatOperand(currentNumber)}</div>
       </div>
       <button value={"Ac"} className="white" onClick={()=> dispatch({type: ACTIONS.Clear})}>Ac</button>
