@@ -8,14 +8,22 @@ const initial = {previousNumber: null, currentNumber: null, operators: null, sta
 
 function App() {
   const[{previousNumber, currentNumber, operators}, dispatch]= useReducer(reducer, initial);
-
+  const INTEGER_FORMATTER = new Intl.NumberFormat("en-us", {
+    maximumFractionDigits: 0,
+  })
+  function formatOperand(operand) {
+    if (operand == null) return
+    const [integer, decimal] = operand.split(".")
+    if (decimal == null) return INTEGER_FORMATTER.format(integer)
+    return `${INTEGER_FORMATTER.format(integer)}.${decimal}`
+  }
   
   return (
     <div className="page-container">
       <div className='grid-container'>
       <div className='screen'>
-      <div className='previous-operand'>{previousNumber}</div>
-      <div className='current'>{numberWithCommas(currentNumber)}</div>
+      <div className='previous-operand'>{formatOperand(previousNumber)}</div>
+      <div className='current'>{formatOperand(currentNumber)}</div>
       </div>
       <button value={"Ac"} className="white" onClick={()=> dispatch({type:'clear'})}>Ac</button>
       <button value={"+/-"} className="white" onClick={()=> dispatch({type: 'delete'})}>del</button>
