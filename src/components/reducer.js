@@ -38,10 +38,17 @@ function calculate({currentNumber, previousNumber, operators}) {
 export default function reducer(state, {type, payload}) {
     switch (type) {
         case "Add-Numbers":
-            if (state.currentNumber === "0" && payload.number === "0") {
-                return state
-                
+            if (state.startClicking) {
+                return{
+                    ...state,
+                    currentNumber: payload.number,
+                    startClicking: false,
+                }
             }
+            if (state.currentNumber === "0" && payload.number === "0")   return state;
+              
+                
+            
             if (payload.number === "." && state.currentNumber.includes(".") ) {
                   return state
                 
@@ -77,7 +84,8 @@ export default function reducer(state, {type, payload}) {
                 currentNumber: null,
             }
             case "clear":
-                return{}
+                return{};
+                // calculate if the equals sign is clicked
             case "evaluate":
                 if (state.currentNumber== null || state.previousNumber== null || state.operators == null) {
                     return state
@@ -85,6 +93,7 @@ export default function reducer(state, {type, payload}) {
                 return{
                     ...state,
                     currentNumber: calculate(state),
+                    startClicking: true,
                     previousNumber: null,
                     operators: null
                 }
